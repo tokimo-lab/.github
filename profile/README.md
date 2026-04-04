@@ -2,96 +2,129 @@
 
 # Tokimo
 
-### 基于 Rust 构建的高性能全场景私有媒体刮削与管理平台
+### The AI-Native Web Desktop OS
 
-**一套系统，媒体管理全覆盖**
+**Your entire digital life — in one browser tab.**
 
-从资源获取、下载管理、媒体整理到多端播放，打通影视管理全链路
+A high-performance, self-hosted operating system that runs in the browser.<br>
+Not another dashboard. A real desktop — with windows, a taskbar, a dock, and an AI agent that can see and operate it all.
 
-🎬 电影 & 电视剧 · 🎵 音乐 · 📚 书籍 & 小说 · 📖 漫画 · 📄 论文 · ··· 更多
+<br>
 
-`Rust` · `WebAssembly` · `Async Runtime` · `Zero-Copy` · `SIMD`
+`Rust` · `React 19` · `WebAssembly` · `ONNX Runtime` · `PostgreSQL`
+
+---
+
+**27 Built-in Apps** · **14 Rust Packages** · **40+ API Modules** · **9 Languages**<br>
+**7 Storage Backends** · **9 Database Types** · **15+ External Integrations**
 
 </div>
 
 ---
 
-### ⚡ 高性能架构 · Powered by Rust
+## The Vision
 
-- **Rust 核心引擎** — 基于 Rust 构建核心服务，零成本抽象、内存安全、无 GC 停顿，提供 C/C++ 级别的极致性能
-- **WebAssembly 前端** — 采用 WASM 技术驱动计算密集型前端模块，媒体解析与元数据处理在浏览器端近原生速度运行
-- **异步并发运行时** — 基于 Tokio 异步运行时，充分利用多核 CPU，高并发刮削与下载任务轻松驾驭
-- **极低资源占用** — 内存占用极小，NAS、树莓派等低功耗设备也能流畅运行，无需高配硬件
+Most self-hosted tools solve one problem — media, files, terminals — each in isolation. Tokimo reimagines them as **apps inside an operating system**.
 
-### 🔍 智能刮削与资源管理
+Open a terminal, drag a file to the media library, run a SQL query on your remote database, ask AI to analyze your photos — **all in parallel windows on the same desktop**. Every app shares the same window manager, file system, auth, and AI engine.
 
-- **极速刮削引擎** — 自动抓取 TMDB、豆瓣等数据源的海报、剧情简介、演员表、评分等完整元数据，告别空白媒体库
-- **多下载器统一管理** — 支持 qBittorrent、Transmission、Aria2 等主流下载器，统一管理所有下载任务，自动整理归档
-- **PT 站智能订阅** — 统一管理多个 PT 站点账号，自动监控新资源，智能匹配并触发下载任务，追剧追番全自动
+### AI Gets a Desktop
 
-### 🔗 全平台兼容
+Here's the paradigm shift: when AI lives inside a desktop OS, it doesn't just output text. It gains a second superpower — **visualization**.
 
-- **完全兼容 Plex · Emby · Jellyfin API** — 无需改变使用习惯
-- **客户端开箱即用** — Infuse、nPlayer、VidHub、Fileball、Kodi 等直接连接使用
-- **挂载主流网盘** — 深度集成百度网盘、115 网盘、WebDAV，云端资源直接在线播放，无需下载到本地
+AI can open windows, render charts, browse files, play media, manage databases, and orchestrate workflows — through the same GUI you use. Not a chatbot sidebar. A **desktop agent**.
 
-### 🔒 隐私优先 · 全程离线
+This is the first system designed from the ground up to give AI a visual interface — and we believe it's the future of human-AI interaction.
 
-- **数据 100% 本地存储** — 无遥测、无云端服务、无需注册第三方账号，数据永远在你自己的服务器上
-- **断网可用** — 完全离线运行，断开互联网后所有功能正常使用
-- **Docker 一键部署** — 一行命令完成部署，支持群晖、威联通、绿联、Unraid、Linux VPS、树莓派等
+---
 
-### 💰 买断制
+## What's Inside
 
-- **一次付费，永久授权** — 没有订阅费，没有隐藏费用，后续更新永久免费
-- **基础版终身免费** — 全量解锁只需 ¥9.9，一次买断
+### 🖥️ Desktop Environment
+A real windowed OS — drag, resize, minimize, maximize, snap. macOS or Windows style. Window state persists to DB via WebSocket. Full recovery on refresh.
+
+### 🤖 AI Engine
+Multi-provider (OpenAI · Claude · Gemini · local LLMs) + MCP tool protocol + agent mode. Local inference via ONNX Runtime: OCR, CLIP image search, face recognition, speech-to-text — on your own hardware.
+
+### 🎬 Media Pipeline
+Movies · TV · Anime · Music · Photos · Novels. Metadata scraping from 10+ sources. HLS adaptive streaming with FFmpeg transcoding. Auto-download, auto-organize, auto-subscribe.
+
+### 📁 Unified File System
+Local · SFTP · SMB · FTP · NFS · S3 · WebDAV — one API, seamless cross-storage transfer.
+
+### 🖥️ Remote Terminal
+Full SSH terminal (xterm.js + WebGL), file tree, process monitor, Docker management — in the browser.
+
+### 🗄️ Database Browser
+PostgreSQL · MySQL · SQLite · SQL Server · MongoDB · Oracle · ClickHouse · Elasticsearch — query any database from one window.
+
+### 📥 Automation
+Rhai scripting + Cron scheduling + JSONPath filtering. qBittorrent · Transmission · Deluge · Aria2 · rTorrent. PT site tracking. YouTube / Bilibili ingest.
+
+### 📚 Reader Suite
+EPUB · MOBI · PDF · Web novels · Academic papers (OpenAlex / CrossRef / arXiv) · Book search (Libgen).
+
+---
+
+## Architecture
+
+| Layer | Technology |
+|---|---|
+| **Frontend** | React 19 · TypeScript · Vite 7 · Tailwind CSS v4 · TanStack Query |
+| **Backend** | Rust (Axum) · Sea-ORM 2.0 · PostgreSQL 16 + pgvector |
+| **AI/ML** | ONNX Runtime · sherpa-onnx · OpenAI / Claude / Gemini |
+| **Type Safety** | Rust DTO → ts-rs → TypeScript (end-to-end, zero manual sync) |
+| **Deploy** | Docker Compose — single Rust binary with embedded frontend |
+
+**14 Rust packages** powering the backend:
+
+| Package | Purpose |
+|---------|---------|
+| `rust-ai` | Multi-provider AI abstraction + streaming |
+| `rust-models` | Local inference — OCR · CLIP · Face · STT |
+| `rust-hls` | HLS adaptive streaming + transcoding |
+| `rust-next-fs` | Unified VFS (7 storage backends) |
+| `rust-workflow` | Automation engine (Rhai + Cron) |
+| `rust-anysql` | Multi-database session manager |
+| `rust-ssh-terminal` | SSH client + PTY management |
+| `rust-client-api` | 15+ external API integrations |
+| `rust-image-processor` | On-the-fly image processing |
+| `rust-subtitle` | Multi-format subtitle parser |
+| `tokimo-ffmpeg` | FFmpeg Rust FFI bindings |
+| `tokimo-universal-archiver` | Universal archive library |
+| `tokimo-wasm` | Browser-side WASM modules |
+| `license-core` | License verification |
+
+---
+
+## Deploy
+
+```bash
+docker compose up -d    # That's it.
+```
+
+One container. Rust binary serves the API + embedded frontend. PostgreSQL for persistence.
+
+Runs on: **Linux VPS · Synology · QNAP · UGREEN · Unraid · Raspberry Pi**
+
+---
+
+## Open Source from Tokimo Lab
+
+| Repository | Description |
+|------------|-------------|
+| [tokimo-ffmpeg](https://github.com/tokimo-lab/tokimo-ffmpeg) | High-performance media transcoding via Rust FFI to FFmpeg |
+| [tokimo-universal-archiver](https://github.com/tokimo-lab/tokimo-universal-archiver) | Universal archive library — ZIP, TAR, 7Z, RAR, GZ, XZ, ZST |
+| [tokimo-universal-im](https://github.com/tokimo-lab/tokimo-universal-im) | Enterprise IM Rust SDK — DingTalk, WeCom, Feishu (21 services) |
+| [tokimo-translate](https://github.com/tokimo-lab/tokimo-translate) | High-performance CN↔EN translation via GGUF models + llama.cpp |
+| [kvdb](https://github.com/tokimo-lab/kvdb) | Embedded key-value database in Rust |
 
 ---
 
 <div align="center">
 
-## Tokimo
+**Privacy-first · Self-hosted · Buy once, own forever**
 
-### High-Performance All-in-One Private Media Scraping & Management Platform — Built with Rust
-
-**One system, complete media management coverage**
-
-From resource acquisition, download management, media organization to multi-device playback — a seamless end-to-end media workflow
-
-🎬 Movies & TV Shows · 🎵 Music · 📚 Books & Novels · 📖 Comics & Manga · 📄 Papers · ··· And More
-
-`Rust` · `WebAssembly` · `Async Runtime` · `Zero-Copy` · `SIMD`
+One system. Every tool you need. Powered by Rust.
 
 </div>
-
----
-
-### ⚡ High-Performance Architecture · Powered by Rust
-
-- **Rust Core Engine** — Built on Rust with zero-cost abstractions, memory safety, and no GC pauses, delivering C/C++ level performance
-- **WebAssembly Frontend** — WASM-powered compute-intensive frontend modules run media parsing and metadata processing at near-native speed in the browser
-- **Async Concurrent Runtime** — Built on Tokio async runtime, fully utilizing multi-core CPUs for high-concurrency scraping and download tasks
-- **Ultra-Low Resource Footprint** — Minimal memory usage, runs smoothly on NAS, Raspberry Pi, and other low-power devices
-
-### 🔍 Intelligent Scraping & Resource Management
-
-- **Blazing-Fast Scraping Engine** — Automatically fetches posters, synopses, cast info, and ratings from TMDB, Douban, and more
-- **Unified Multi-Downloader Management** — Supports qBittorrent, Transmission, Aria2, and more with automatic organization
-- **Smart PT Site Subscriptions** — Manage multiple PT site accounts, auto-monitor new resources, intelligently match and trigger downloads
-
-### 🔗 Full Platform Compatibility
-
-- **Fully Compatible with Plex · Emby · Jellyfin APIs** — Zero migration cost
-- **Works Out of the Box** — Infuse, nPlayer, VidHub, Fileball, Kodi, and more connect directly
-- **Mount Cloud Drives** — Native integration with Baidu Pan, 115 Pan, and WebDAV for instant cloud streaming
-
-### 🔒 Privacy First · 100% Offline
-
-- **100% Local Data Storage** — Zero telemetry, no cloud services, no third-party accounts required. Your data stays on your server
-- **Works Offline** — Runs entirely offline, all features available without internet
-- **One-Click Docker Deployment** — Supports Synology, QNAP, UGREEN, Unraid, Linux VPS, Raspberry Pi, and more
-
-### 💰 Buy Once, Own Forever
-
-- **One-Time Purchase, Lifetime License** — No subscriptions, no hidden fees, free updates forever
-- **Free Basic Plan** — Full unlock for just ¥9.9, one-time payment
