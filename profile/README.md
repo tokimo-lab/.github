@@ -6,8 +6,8 @@
 
 **Your always-on personal assistant, living inside a cloud desktop.**
 
-Not another chatbot. Not another CLI tool.<br>
-A full operating system — where your AI assistant works, thinks, and shows you the results in real time.
+A lightweight, self-hosted operating system that runs in the browser —<br>
+where your AI assistant works, thinks, and shows you the results in real time.
 
 </div>
 
@@ -15,47 +15,49 @@ A full operating system — where your AI assistant works, thinks, and shows you
 
 ### The Problem
 
-**Chatbots** can talk, but can't act. **CLI Agents** can act, but you can't see — they work in a black box, and you have to check ten different apps to verify the results.
+**CLI agents are powerful, but blind.** Claude Code, Codex, and MCP-powered tools can execute complex workflows — but the results live in a black box. You still verify everything yourself, across ten different apps.
 
-Your data is scattered everywhere. Files on the NAS. Photos on your phone. Meeting minutes in Slack. Media in Plex. Nothing talks to anything.
+Even with skills that chain services together, **your raw data is still scattered across vendor platforms**. Meetings in Feishu, notes in Notion, media in Plex, files on a NAS. These platforms don't expose your personal activity to AI. Stitching fragments into coherent personal memory is complex and entirely at the mercy of each vendor's API.
+
+**Traditional OS is the wrong abstraction.** Bloated, closed, single-device. Want your AI agent to do real work? It needs your data — which is stuck on one machine. Upgrade your laptop? Migrate the drive. Work from another device? You can't.
+
+**Computer-use agents are a dead end.** Feeding screenshots to a vision model so it can click buttons is slow, brittle, and burns tokens on pixel parsing. The right answer isn't bolting AI vision onto a legacy GUI. It's building an OS where **AI has native API access from day one**.
 
 ### The Answer
 
-**Put the AI assistant inside a full graphical operating system.**
+**A cloud-native desktop OS built for the AI era.** Every app exposes structured APIs. AI doesn't read pixels — it calls functions. Results appear instantly in the GUI.
 
-It's not a black box anymore. It lives in a desktop with windows, a taskbar, and a file manager. Everything it does — you see it in real time by opening a browser.
+Your assistant lives on a cloud computer that's always on. Connect it to any IM — Feishu, DingTalk, Discord, Telegram, Slack. Send a message from your phone. Open the browser when you're ready — everything is done.
 
-Connect it to Feishu, DingTalk, Discord, Telegram, Slack. Send a message from your phone. The assistant works on your cloud desktop silently. Open the browser — it's all done.
-
-**The power of CLI + the visibility of GUI. One system, all your data, one assistant.**
+**CLI power + GUI visibility. Not tied to one device. One system, all your data, one assistant.**
 
 ---
 
 ### What Sets It Apart
 
-🧠 **Personal Data Hub** — Files, media, knowledge, terminals, databases, AI conversations — all in one system. Work, entertainment, research, infrastructure — nothing lives in silos anymore.
+🧠 **Personal Data Hub** — Work, entertainment, knowledge, infrastructure converge in one system. AI cross-references everything — what you downloaded last week, what you read yesterday, what you discussed a month ago. No vendor lock-in, no fragmented memory.
 
-🤖 **AI With Eyes** — Not a chatbot with a UI. The AI lives inside a windowed desktop OS. It opens windows, moves files, renders charts, plays media. Visualization is its native ability.
+🤖 **AI With Native APIs** — Not pixel-pushing computer-use. Every app has typed endpoints. AI opens windows, moves files, renders charts, queries databases — directly, instantly, no vision model overhead.
 
-💬 **Always-On Assistant** — Hook into any IM. Your assistant is 7×24 on your cloud desktop, ready to act. Open the browser to see everything it's done.
+💬 **Always-On, Any Device** — Your assistant lives on the cloud desktop 24/7. Connect via any IM. Open from any browser. Upgrade your laptop — nothing changes. Your digital life is a Docker volume, not a hard drive.
 
-⚡ **Rust-Powered** — Zero GC pauses, C-level performance. Local ONNX inference (OCR, image search, face recognition, speech-to-text). Runs on a NAS or a Raspberry Pi.
+⚡ **Rust-Powered** — Zero GC, C-level throughput. Local ONNX inference (OCR, image search, face recognition, speech-to-text). Runs on a NAS or Raspberry Pi.
 
-🔒 **Privacy-First** — 100% on your server. Works fully offline. One-line Docker deploy.
+�� **Your Data, Forever** — 100% local. Works offline. One-line Docker deploy. No vendor, no telemetry, no lock-in.
 
 ---
 
 ### Real-World Scenarios
 
-🎬 **Home Media** — Auto-subscribe, download, organize, scrape metadata, transcode, stream. Movies, music, photos, novels. Compatible with Plex / Emby / Jellyfin.
+🎬 **Media Autopilot** — Auto-subscribe, download, organize, scrape metadata, transcode, stream. Plex/Emby/Jellyfin compatible. You didn't lift a finger.
 
-💼 **Remote Work** — SSH terminals, Docker management, database queries, file operations across NAS/cloud — all in browser windows. AI summarizes meeting notes from Feishu/Slack into your knowledge base.
+💼 **DevOps Dashboard** — SSH, Docker, databases, file management across NAS/cloud — parallel browser windows on one desktop. AI alerts on anomalies.
 
-📸 **Photo Management** — Import from any storage → AI tags faces, extracts text (OCR), geolocates → search: "photos from the beach last summer". Zero cloud upload.
+📸 **AI Photo Library** — Face clustering, OCR, geo-tagging, semantic search. "Sunset photos with Sarah from 2024." All processed locally.
 
-📚 **Research** — Search papers on OpenAlex/arXiv, read PDFs in-browser, AI summarizes. Same workflow for novels, e-books, technical docs.
+📚 **Research** — Papers from OpenAlex/arXiv, PDFs in-browser, AI summaries. Same workflow for novels, e-books, technical docs.
 
-🤖 **Personal AI** — "Organize yesterday's downloads." "What did we discuss about the migration plan last week?" — your assistant has memory, context, and can act on the desktop.
+🤖 **Personal Assistant** — "What did we discuss about the migration plan last week? Also, download the top sci-fi from 2025." Memory, context, action.
 
 ---
 
@@ -63,7 +65,7 @@ Connect it to Feishu, DingTalk, Discord, Telegram, Slack. Send a message from yo
 
 Rust (Axum) · React 19 · PostgreSQL · ONNX Runtime · WebAssembly
 
-End-to-end type safety: Rust → ts-rs → TypeScript → React Query. Change once, updates everywhere.
+End-to-end type safety: Rust → ts-rs → TypeScript → React Query.
 
 ```bash
 docker compose up -d    # One-line deploy
