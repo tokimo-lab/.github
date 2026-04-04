@@ -19,7 +19,7 @@ where your AI assistant works, thinks, and shows you the results in real time.
 
 Even with skills that chain services together, **your raw data is still scattered across vendor platforms**. Meetings in Feishu, notes in Notion, media in Plex, files on a NAS. These platforms don't expose your personal activity to AI. Stitching fragments into coherent personal memory is complex and entirely at the mercy of each vendor's API.
 
-**Traditional OS is the wrong abstraction.** Bloated, closed, single-device. Want your AI agent to do real work? It needs your data — which is stuck on one machine. Upgrade your laptop? Migrate the drive. Work from another device? You can't.
+**Traditional OS is the wrong abstraction.** Bloated, closed, single-device. Want your AI agent to do real work? It needs your data — but your data is trapped on one machine. Upgrade your laptop? Hours of migrating drives and reconfiguring. Work from another device? Too bad — everything is stuck over there.
 
 **Computer-use agents are a dead end.** Feeding screenshots to a vision model so it can click buttons is slow, brittle, and burns tokens on pixel parsing. The right answer isn't bolting AI vision onto a legacy GUI. It's building an OS where **AI has native API access from day one**.
 
