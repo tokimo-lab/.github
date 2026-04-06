@@ -1,6 +1,6 @@
 <div align="center">
 
-# Tokimo
+# TokimoOS
 
 ### The AI-Native Cloud Desktop OS
 
