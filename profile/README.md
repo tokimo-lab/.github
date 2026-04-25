@@ -13,21 +13,27 @@ No vendor account. No cloud lock-in. No black box.
 
 ## The problem with everyone else's "AI agent"
 
-Every commercial agent platform — and every "AI desktop" startup — boils down to the same trade:
+Look at what's actually shipping in 2025:
 
-- **Their model** runs on **their servers**.
-- **Your data** is uploaded to **their cloud** to give the model context.
-- **Their tools** define what the agent can do; you can't add, remove, or replace them.
-- **Their pricing** decides how much you can use it. Their TOS decides what you can ask. Their roadmap decides whether your favorite feature survives the next quarter.
-- **Migration cost** is total — when you leave, you leave with nothing.
+| Project | What it really is |
+|---|---|
+| **OpenAI Codex / ChatGPT Agent** | Hardwired to GPT. You can't swap the model. Your code, your prompts, your tool calls — all routed through OpenAI's servers. |
+| **Anthropic Claude Code** | Hardwired to Claude. Beautiful CLI, single vendor. The day Anthropic changes pricing or policy, your workflow changes with it. |
+| **Cursor / Windsurf / GitHub Copilot** | Closed-source IDE shells over a proprietary cloud. Your model, your context, your code go through their pipeline. |
+| **Most "AI desktop" startups** | A thin wrapper around `openai` SDK + LangChain + a vector DB SaaS + a frontend framework. When any vendor changes, the product breaks. |
 
-The agent is "yours" right up until the bill arrives, the model gets nerfed, the API breaks, the company pivots, or the policy changes.
+The pattern is identical: **their model, their cloud, their TOS, their roadmap**. The agent is "yours" right up until the bill arrives, the model gets nerfed, the API breaks, the company pivots, or the policy changes. Migration cost is total — when you leave, you leave with nothing.
 
----
+## What Tokimo is instead
 
-## What Tokimo is
+**Pure in-house. Pure open source. Zero vendor lock-in.**
 
-**A personal AI agent designed to be fully self-sovereign.** Every layer is a building block you can inspect, replace, or remove. You assemble the agent you want from pieces you control, run it on your own hardware, and own every byte of the data it touches.
+- Not a wrapper around someone's SDK — the agent loop, the tool dispatcher, the sandbox, the VFS, the desktop shell are all written from scratch in Rust + TypeScript.
+- Not married to any model — point it at OpenAI, Anthropic, DeepSeek, Gemini, or your own Ollama box. Switch mid-conversation.
+- Not dependent on any SaaS — no LangSmith, no Pinecone, no Vercel AI, no third-party "agent platform". One container, one Postgres, done.
+- Not a closed product — every line of code is on GitHub, every protocol is documented, every layer is replaceable.
+
+Tokimo is built for the person who asks: *"why does my AI agent need a corporate sponsor?"*
 
 ---
 
