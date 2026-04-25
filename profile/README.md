@@ -2,83 +2,82 @@
 
 # Tokimo
 
-### Your self-hosted AI agent — with a desktop attached
+### Your AI agent. Your hardware. Your rules.
 
-A Codex-grade personal assistant that runs on **your** server.<br>
-Full virtual filesystem, sandboxed shell, persistent memory, and a real GUI<br>
-where you can watch every action it takes.
+A self-hosted personal assistant assembled from building blocks you own and can swap out.<br>
+No vendor account. No cloud lock-in. No black box.
 
 </div>
 
 ---
 
-## Why Tokimo
+## The problem with everyone else's "AI agent"
 
-Modern coding agents — Codex, Claude Code, and friends — are spectacular at running tools in a terminal. But every action lives behind a CLI scroll: did the file land where you expected? Did the migration succeed? You verify it yourself, in another window.
+Every commercial agent platform — and every "AI desktop" startup — boils down to the same trade:
 
-The vendor "agent" platforms solve visibility but lock everything to their cloud, their data formats, their token budgets. Your photos, notes, downloads, and meeting transcripts stay scattered across ten apps, none of which expose enough to the agent for it to *actually* know you.
+- **Their model** runs on **their servers**.
+- **Your data** is uploaded to **their cloud** to give the model context.
+- **Their tools** define what the agent can do; you can't add, remove, or replace them.
+- **Their pricing** decides how much you can use it. Their TOS decides what you can ask. Their roadmap decides whether your favorite feature survives the next quarter.
+- **Migration cost** is total — when you leave, you leave with nothing.
 
-**Tokimo runs the same kind of agent — sandboxed shell, virtual filesystem, parallel sub-agents, MCP, persistent memory — but on hardware you own, sitting next to all of your personal data, with a browser-based desktop OS you can open at any time to see exactly what it's doing.**
+The agent is "yours" right up until the bill arrives, the model gets nerfed, the API breaks, the company pivots, or the policy changes.
 
 ---
 
-## Capability parity with frontier coding agents
+## What Tokimo is
 
-Every primitive a serious autonomous agent needs, implemented natively in Rust:
+**A personal AI agent designed to be fully self-sovereign.** Every layer is a building block you can inspect, replace, or remove. You assemble the agent you want from pieces you control, run it on your own hardware, and own every byte of the data it touches.
 
-| Capability | Tokimo | Notes |
+---
+
+## Built like LEGO
+
+Every part of the stack is a swappable block:
+
+| Block | Pick anything | You control |
 |---|---|---|
-| **Sandboxed shell** | ✅ Bash · PowerShell | AST-based read-only classification, isolated cwd, container-bounded |
-| **File ops** | ✅ Read · Write · Edit | Multi-edit with conflict detection |
-| **Search** | ✅ Glob · Grep · ToolSearch | ripgrep-backed; tool index for skill discovery |
-| **Web** | ✅ WebFetch · WebSearch | Content extraction + AI search APIs |
-| **Sub-agents** | ✅ DispatchAgent | Parallel background workers with their own tool budgets |
-| **Planning** | ✅ TodoWrite · Plan mode | Structured todo state visible to user in real time |
-| **Skills** | ✅ Skill tool | Project-local + global skill packs |
-| **MCP** | ✅ Native client | Connect any MCP server; tools auto-registered |
-| **Persistent memory** | ✅ PostgreSQL + pgvector | Sessions resume across devices, semantic recall |
-| **Multi-provider LLM** | ✅ OpenAI · Anthropic · DeepSeek · Gemini · Ollama | Per-conversation switching, capability-aware routing |
-| **Virtual filesystem** | ✅ Local · SFTP · SMB · FTP · S3 · WebDAV · NFS · Aliyun · Baidu · 115 · 189 · Quark | Single API, all your storage |
-| **Worktree isolation** | ✅ Worktree tool | Run risky changes in a git worktree, merge when verified |
-| **Always-on** | ✅ | Lives on a server, reachable from any browser or IM |
+| **Model** | OpenAI · Anthropic · DeepSeek · Gemini · **Ollama (local)** · any OpenAI-compatible endpoint | API key, base URL, routing rules, per-conversation override |
+| **Tools** | 20+ built-in (Bash, Read/Write/Edit, Grep, Glob, WebFetch, DispatchAgent, …) + your own | Tool registry is open — disable any, add any |
+| **Skills** | Project-local skill packs · global skills · `Skill` tool for on-demand load | Drop a folder in, the agent picks it up |
+| **MCP servers** | Any Model Context Protocol server (filesystem, GitHub, Slack, custom) | Configure in settings, instantly available to every agent |
+| **Storage** | Local · SFTP · SMB · FTP · S3 · WebDAV · NFS · Aliyundrive · Baidu · 115 · 189 · Quark | Unified VFS API; add a driver, every app sees it |
+| **IM bridge** | Feishu · DingTalk · Discord · Telegram · Slack · custom webhook | Talk to your agent from anywhere |
+| **Sandbox** | Bash · PowerShell · git worktree isolation · container-bounded | You set the safety rules, you control the override |
+| **Memory** | PostgreSQL + pgvector | Your DB. Your backups. Dump it, move it, query it. |
+| **Front-end shell** | Browser-rendered desktop OS — every app is a window with typed APIs | Open-source UI; replace any panel, add your own apps |
+
+Every block has a typed API contract. Every contract is documented. Nothing is closed off. **If you don't like a piece, replace it.**
 
 ---
 
-## What Tokimo adds on top
+## Full control, end to end
 
-### A real desktop, not a chat box
-
-Every agent action shows up as a window on a browser-rendered macOS/Windows-style desktop — taskbar, dock, menu bar, drag-and-drop, multi-window. The agent opens a file manager when it edits files. It opens a terminal when it runs commands. It opens a database browser when it queries SQL. **CLI power, GUI visibility.**
-
-### One unified data layer
-
-All your personal data converges in one PostgreSQL database and one virtual filesystem. The agent has the same view you do — across local disk, NAS shares, S3, cloud drives, photo library, music collection, chat history, and email. It can reason across any of them in a single turn.
-
-### Reach it from anywhere
-
-Bridge your agent into Feishu, DingTalk, Discord, Telegram, Slack — any IM you already use. Send a message from your phone: *"Organize this week's downloads and summarize today's meeting notes."* Tokimo works silently on your server. Open the browser when you're back at a desk — everything is done, every step visible.
-
-### Privately yours, forever
-
-100% self-hosted. One Docker container. Runs on a NAS, VPS, Raspberry Pi, or homelab box. No telemetry, no vendor account, no cloud tier. Your data is a Docker volume — your agent's memory is a database row — both portable, both yours.
+| You own | Tokimo guarantees |
+|---|---|
+| **The model.** Pick frontier API, pick Ollama, pick a fine-tune. Switch mid-conversation. | No hardcoded provider, no usage telemetry, no rate-limit handcuffs. |
+| **The data.** Your photos, files, chats, memories live in PostgreSQL + a Docker volume. | Zero cloud upload. Zero outbound calls except the LLM endpoint you choose. |
+| **The agent's behavior.** System prompt, tool set, memory policy, sandbox rules — all configurable. | No "trust the platform" black boxes. Every prompt and tool call is logged and auditable. |
+| **The runtime.** Single Docker container. Runs on a NAS, VPS, Raspberry Pi, homelab box. | One `docker compose up`. No SaaS dependency. Works air-gapped. |
+| **The exit.** Walk away with your DB dump and your data volume — that's the whole product state. | No vendor lock-in. No format prison. No "export limited to last 90 days". |
 
 ---
 
-## What it can do today (beyond the agent itself)
+## What it can do today
 
-Tokimo has been a personal media + knowledge OS long before the agent layer landed. All of those apps are still here, and the agent has direct API access to every one of them:
+Tokimo started as a personal media + knowledge OS. All of those apps are still here, exposed to the agent through typed APIs as native tools:
 
-- **Media autopilot** — Movies, TV, anime: subscribe, download, scrape metadata (TMDB / Bangumi), transcode (FFmpeg), stream (HLS). Plex/Emby/Jellyfin compatible.
-- **Photo library** — Local face clustering, OCR text search, geo-tagging, CLIP semantic search ("sunset photos with Sarah from 2024"). All inferred locally via ONNX, zero cloud upload.
-- **Music** — Streaming with lyrics, visualizer, MusicBrainz/Spotify metadata.
-- **Documents** — Real-time collaborative editor with version history and whiteboard.
-- **Terminal** — Multi-session SSH client with remote script execution.
+- **Media** — Movies / TV / anime: subscribe, download, scrape (TMDB · Bangumi · Douban), transcode (FFmpeg), stream (HLS). Plex / Emby / Jellyfin compatible.
+- **Photos** — Local face clustering, OCR, geo-tagging, CLIP semantic search ("sunset photos with Sarah from 2024"). All ONNX-local, zero cloud upload.
+- **Music** — Streaming, synced lyrics, visualizer.
+- **Docs** — Real-time collaborative editor, version history, whiteboard.
+- **Terminal** — Multi-session SSH client.
 - **Database browser** — PostgreSQL · MySQL · SQLite · MongoDB · Oracle · ClickHouse · Elasticsearch.
 - **Email** — IMAP IDLE push, multi-account.
 - **Knowledge** — Academic papers (OpenAlex · CrossRef · arXiv), books (Libgen), web novels.
-- **File manager** — Unified VFS finder over every storage type listed above.
+- **Workflow** — Cron + Rhai scripting + JSONPath filters.
 
-The agent uses these as tools. You use these as apps. Same data, same windows.
+The agent doesn't *use* a cloud service to access these — they're part of the same process, sharing the same database, the same VFS, the same window manager. You use them as apps. The agent uses them as tools. **One system, one source of truth.**
 
 ---
 
@@ -86,13 +85,13 @@ The agent uses these as tools. You use these as apps. Same data, same windows.
 
 Rust (Axum + Tokio) backend · React 19 + Tailwind v4 frontend · PostgreSQL 16 + pgvector · ONNX Runtime · WebAssembly · WebSocket streaming.
 
-End-to-end type safety: Rust struct → ts-rs → TypeScript DTO → React Query. Change a response shape once, everything updates.
+End-to-end type safety: Rust struct → ts-rs → TypeScript DTO → React Query.
 
 ```bash
 docker compose up -d
 ```
 
-One container. One port. Your data, your hardware, your agent.
+One container. One port. One volume. Everything else is yours.
 
 ---
 
@@ -101,14 +100,14 @@ One container. One port. Your data, your hardware, your agent.
 | Repo | What it is |
 |---|---|
 | **[tokimo](https://github.com/tokimo-lab/tokimo)** | Main monorepo — agent engine, desktop shell, all apps |
-| **[tokimo-package-vfs](https://github.com/tokimo-lab/tokimo-package-vfs)** | Async VFS for local/SFTP/FTP/SMB/S3/NFS/WebDAV with handwritten NTLMv2 SMB client |
+| **[tokimo-package-vfs](https://github.com/tokimo-lab/tokimo-package-vfs)** | Async unified VFS (local + SFTP/FTP/SMB/S3/NFS/WebDAV) with a handwritten NTLMv2 SMB client |
 
 ---
 
 <div align="center">
 
-Self-hosted · Privacy-first · Rust-powered · Codex-grade
+Self-hosted · Vendor-neutral · Composable · Auditable
 
-**Your agent. Your data. Your hardware.**
+**Your agent. Your hardware. Your rules.**
 
 </div>
