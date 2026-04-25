@@ -1,82 +1,114 @@
 <div align="center">
 
-# TokimoOS
+# Tokimo
 
-### The AI-Native Cloud Desktop OS
+### Your self-hosted AI agent — with a desktop attached
 
-Your always-on personal assistant, living inside a cloud desktop.
-
-A lightweight, self-hosted operating system that runs in the browser —<br>
-where your AI assistant works, thinks, and shows you the results in real time.
+A Codex-grade personal assistant that runs on **your** server.<br>
+Full virtual filesystem, sandboxed shell, persistent memory, and a real GUI<br>
+where you can watch every action it takes.
 
 </div>
 
 ---
 
-### The Problem
+## Why Tokimo
 
-**CLI agents are powerful, but blind.** Claude Code, Codex, and MCP-powered tools can execute complex workflows — but the results live in a black box. You still verify everything yourself, across ten different apps.
+Modern coding agents — Codex, Claude Code, and friends — are spectacular at running tools in a terminal. But every action lives behind a CLI scroll: did the file land where you expected? Did the migration succeed? You verify it yourself, in another window.
 
-Even with skills that chain services together, your raw data is still scattered across vendor platforms. Meetings in Feishu, notes in Notion, media in Plex, files on a NAS. These platforms don't expose your personal activity to AI. Stitching fragments into coherent personal memory is complex and entirely at the mercy of each vendor's API.
+The vendor "agent" platforms solve visibility but lock everything to their cloud, their data formats, their token budgets. Your photos, notes, downloads, and meeting transcripts stay scattered across ten apps, none of which expose enough to the agent for it to *actually* know you.
 
-**Traditional OS is the wrong abstraction.** Bloated, closed, single-device. Want your AI agent to do real work? It needs your data — but your data is trapped on one machine. Upgrade your laptop? Hours of migrating drives and reconfiguring. Work from another device? Too bad — everything is stuck over there.
-
-**Computer-use agents are a dead end.** Feeding screenshots to a vision model so it can click buttons is slow, brittle, and burns tokens on pixel parsing. The right answer isn't bolting AI vision onto a legacy GUI. It's building an OS where AI has native API access from day one.
-
-### The Answer
-
-A cloud-native desktop OS built for the AI era. Every app exposes structured APIs. AI doesn't read pixels — it calls functions. Results appear instantly in the GUI.
-
-Your assistant lives on a cloud computer that's always on. Connect it to any IM — Feishu, DingTalk, Discord, Telegram, Slack. Send a message from your phone. Open the browser when you're ready — everything is done.
-
-CLI power + GUI visibility. Not tied to one device. One system, all your data, one assistant.
+**Tokimo runs the same kind of agent — sandboxed shell, virtual filesystem, parallel sub-agents, MCP, persistent memory — but on hardware you own, sitting next to all of your personal data, with a browser-based desktop OS you can open at any time to see exactly what it's doing.**
 
 ---
 
-### What Sets It Apart
+## Capability parity with frontier coding agents
 
-**Personal Data Hub** — Work, entertainment, knowledge, infrastructure converge in one system. AI cross-references everything — what you downloaded last week, what you read yesterday, what you discussed a month ago. No vendor lock-in, no fragmented memory.
+Every primitive a serious autonomous agent needs, implemented natively in Rust:
 
-**AI With Native APIs** — Not pixel-pushing computer-use. Every app has typed endpoints. AI opens windows, moves files, renders charts, queries databases — directly, instantly, no vision model overhead.
-
-**Always-On, Any Device** — Your assistant lives on the cloud desktop 24/7. Connect via any IM. Open from any browser. Upgrade your laptop — nothing changes. Your digital life is a Docker volume, not a hard drive.
-
-**Rust-Powered** — Zero GC, C-level throughput. Local ONNX inference for OCR, image search, face recognition, speech-to-text. Runs on a NAS or Raspberry Pi.
-
-**Your Data, Forever** — 100% local. Works offline. One-line Docker deploy. No vendor, no telemetry, no lock-in.
-
----
-
-### Scenarios
-
-**Media Autopilot** — Auto-subscribe, download, organize, scrape metadata, transcode, stream. Plex/Emby/Jellyfin compatible. You didn't lift a finger.
-
-**DevOps Dashboard** — SSH, Docker, databases, file management across NAS and cloud — parallel browser windows on one desktop. AI alerts on anomalies.
-
-**AI Photo Library** — Face clustering, OCR, geo-tagging, semantic search. "Sunset photos with Sarah from 2024." All processed locally.
-
-**Research** — Papers from OpenAlex and arXiv, PDFs in-browser, AI summaries. Same workflow for novels, e-books, technical docs.
-
-**Personal Assistant** — "What did we discuss about the migration plan last week? Also, download the top sci-fi from 2025." Memory, context, action.
+| Capability | Tokimo | Notes |
+|---|---|---|
+| **Sandboxed shell** | ✅ Bash · PowerShell | AST-based read-only classification, isolated cwd, container-bounded |
+| **File ops** | ✅ Read · Write · Edit | Multi-edit with conflict detection |
+| **Search** | ✅ Glob · Grep · ToolSearch | ripgrep-backed; tool index for skill discovery |
+| **Web** | ✅ WebFetch · WebSearch | Content extraction + AI search APIs |
+| **Sub-agents** | ✅ DispatchAgent | Parallel background workers with their own tool budgets |
+| **Planning** | ✅ TodoWrite · Plan mode | Structured todo state visible to user in real time |
+| **Skills** | ✅ Skill tool | Project-local + global skill packs |
+| **MCP** | ✅ Native client | Connect any MCP server; tools auto-registered |
+| **Persistent memory** | ✅ PostgreSQL + pgvector | Sessions resume across devices, semantic recall |
+| **Multi-provider LLM** | ✅ OpenAI · Anthropic · DeepSeek · Gemini · Ollama | Per-conversation switching, capability-aware routing |
+| **Virtual filesystem** | ✅ Local · SFTP · SMB · FTP · S3 · WebDAV · NFS · Aliyun · Baidu · 115 · 189 · Quark | Single API, all your storage |
+| **Worktree isolation** | ✅ Worktree tool | Run risky changes in a git worktree, merge when verified |
+| **Always-on** | ✅ | Lives on a server, reachable from any browser or IM |
 
 ---
 
-### Architecture
+## What Tokimo adds on top
 
-Rust (Axum) · React 19 · PostgreSQL · ONNX Runtime · WebAssembly
+### A real desktop, not a chat box
 
-End-to-end type safety: Rust → ts-rs → TypeScript → React Query.
+Every agent action shows up as a window on a browser-rendered macOS/Windows-style desktop — taskbar, dock, menu bar, drag-and-drop, multi-window. The agent opens a file manager when it edits files. It opens a terminal when it runs commands. It opens a database browser when it queries SQL. **CLI power, GUI visibility.**
+
+### One unified data layer
+
+All your personal data converges in one PostgreSQL database and one virtual filesystem. The agent has the same view you do — across local disk, NAS shares, S3, cloud drives, photo library, music collection, chat history, and email. It can reason across any of them in a single turn.
+
+### Reach it from anywhere
+
+Bridge your agent into Feishu, DingTalk, Discord, Telegram, Slack — any IM you already use. Send a message from your phone: *"Organize this week's downloads and summarize today's meeting notes."* Tokimo works silently on your server. Open the browser when you're back at a desk — everything is done, every step visible.
+
+### Privately yours, forever
+
+100% self-hosted. One Docker container. Runs on a NAS, VPS, Raspberry Pi, or homelab box. No telemetry, no vendor account, no cloud tier. Your data is a Docker volume — your agent's memory is a database row — both portable, both yours.
+
+---
+
+## What it can do today (beyond the agent itself)
+
+Tokimo has been a personal media + knowledge OS long before the agent layer landed. All of those apps are still here, and the agent has direct API access to every one of them:
+
+- **Media autopilot** — Movies, TV, anime: subscribe, download, scrape metadata (TMDB / Bangumi), transcode (FFmpeg), stream (HLS). Plex/Emby/Jellyfin compatible.
+- **Photo library** — Local face clustering, OCR text search, geo-tagging, CLIP semantic search ("sunset photos with Sarah from 2024"). All inferred locally via ONNX, zero cloud upload.
+- **Music** — Streaming with lyrics, visualizer, MusicBrainz/Spotify metadata.
+- **Documents** — Real-time collaborative editor with version history and whiteboard.
+- **Terminal** — Multi-session SSH client with remote script execution.
+- **Database browser** — PostgreSQL · MySQL · SQLite · MongoDB · Oracle · ClickHouse · Elasticsearch.
+- **Email** — IMAP IDLE push, multi-account.
+- **Knowledge** — Academic papers (OpenAlex · CrossRef · arXiv), books (Libgen), web novels.
+- **File manager** — Unified VFS finder over every storage type listed above.
+
+The agent uses these as tools. You use these as apps. Same data, same windows.
+
+---
+
+## Architecture
+
+Rust (Axum + Tokio) backend · React 19 + Tailwind v4 frontend · PostgreSQL 16 + pgvector · ONNX Runtime · WebAssembly · WebSocket streaming.
+
+End-to-end type safety: Rust struct → ts-rs → TypeScript DTO → React Query. Change a response shape once, everything updates.
 
 ```bash
 docker compose up -d
 ```
 
+One container. One port. Your data, your hardware, your agent.
+
+---
+
+## Repositories
+
+| Repo | What it is |
+|---|---|
+| **[tokimo](https://github.com/tokimo-lab/tokimo)** | Main monorepo — agent engine, desktop shell, all apps |
+| **[tokimo-package-vfs](https://github.com/tokimo-lab/tokimo-package-vfs)** | Async VFS for local/SFTP/FTP/SMB/S3/NFS/WebDAV with handwritten NTLMv2 SMB client |
+
 ---
 
 <div align="center">
 
-Self-hosted · Privacy-first · Rust-powered
+Self-hosted · Privacy-first · Rust-powered · Codex-grade
 
-**One system. All your data. One assistant.**
+**Your agent. Your data. Your hardware.**
 
 </div>
