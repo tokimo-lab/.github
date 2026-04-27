@@ -99,6 +99,67 @@ docker compose up -d
 
 ---
 
+## Repositories
+
+### Core
+
+| Repository | CI | Maintainer | Commits |
+|---|---|---|---|
+| [tokimo](https://github.com/tokimo-lab/tokimo) | — | William Chan | 2,420 |
+
+### Packages
+
+| Repository | CI | Maintainer | Commits |
+|---|---|---|---|
+| [tokimo-package-anysql](https://github.com/tokimo-lab/tokimo-package-anysql) | [![CI](https://github.com/tokimo-lab/tokimo-package-anysql/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-package-anysql/actions/workflows/ci.yml) | William Chan | 5 |
+| [tokimo-package-channel](https://github.com/tokimo-lab/tokimo-package-channel) | — | William Chan | 1 |
+| [tokimo-package-ffmpeg](https://github.com/tokimo-lab/tokimo-package-ffmpeg) | — | William Chan | 3 |
+| [tokimo-package-hls](https://github.com/tokimo-lab/tokimo-package-hls) | — | William Chan | 2 |
+| [tokimo-package-mcp](https://github.com/tokimo-lab/tokimo-package-mcp) | — | William Chan | 2 |
+| [tokimo-package-rootfs](https://github.com/tokimo-lab/tokimo-package-rootfs) | [![CI](https://github.com/tokimo-lab/tokimo-package-rootfs/actions/workflows/build.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-package-rootfs/actions/workflows/build.yml) | William Chan | 10 |
+| [tokimo-package-sandbox](https://github.com/tokimo-lab/tokimo-package-sandbox) | — | William Chan | 20 |
+| [tokimo-package-sdk](https://github.com/tokimo-lab/tokimo-package-sdk) | — | William Chan | 15 |
+| [tokimo-package-ssh](https://github.com/tokimo-lab/tokimo-package-ssh) | — | William Chan | 2 |
+| [tokimo-package-thumbnail](https://github.com/tokimo-lab/tokimo-package-thumbnail) | — | William Chan | 3 |
+| [tokimo-package-universal-archiver](https://github.com/tokimo-lab/tokimo-package-universal-archiver) | — | William Chan | 2 |
+| [tokimo-package-vfs](https://github.com/tokimo-lab/tokimo-package-vfs) | [![CI](https://github.com/tokimo-lab/tokimo-package-vfs/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-package-vfs/actions/workflows/ci.yml) | William Chan | 5 |
+| [tokimo-package-web-fetch](https://github.com/tokimo-lab/tokimo-package-web-fetch) | [![CI](https://github.com/tokimo-lab/tokimo-package-web-fetch/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-package-web-fetch/actions/workflows/ci.yml) | William Chan | 4 |
+| [tokimo-package-web-search](https://github.com/tokimo-lab/tokimo-package-web-search) | — | William Chan | 3 |
+
+### Apps
+
+| Repository | CI | Maintainer | Commits |
+|---|---|---|---|
+| [tokimo-app-apple-music](https://github.com/tokimo-lab/tokimo-app-apple-music) | — | William Chan | 14 |
+| [tokimo-app-helloworld](https://github.com/tokimo-lab/tokimo-app-helloworld) | — | William Chan | 10 |
+| [tokimo-app-home-assistant](https://github.com/tokimo-lab/tokimo-app-home-assistant) | — | Emil Zhai | 50 |
+
+### Libraries & Tools
+
+| Repository | CI | Maintainer | Commits |
+|---|---|---|---|
+| [tokimo-ui](https://github.com/tokimo-lab/tokimo-ui) | [![CI](https://github.com/tokimo-lab/tokimo-ui/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-ui/actions/workflows/ci.yml) | William Chan | 213 |
+| [tokimo-perception](https://github.com/tokimo-lab/tokimo-perception) | — | Emil Zhai | 128 |
+| [tokimo-bus](https://github.com/tokimo-lab/tokimo-bus) | — | William Chan | 4 |
+| [tokimo-viewers](https://github.com/tokimo-lab/tokimo-viewers) | — | Emil Zhai | 2 |
+| [tokimo-kvm](https://github.com/tokimo-lab/tokimo-kvm) | — | William Chan | 1 |
+| [tokimo-translate](https://github.com/tokimo-lab/tokimo-translate) | — | William Chan | 1 |
+| [tokimo-universal-im](https://github.com/tokimo-lab/tokimo-universal-im) | — | William Chan | 4 |
+| [kvdb](https://github.com/tokimo-lab/kvdb) | — | William Chan | 1 |
+
+### Private (暂未开源)
+
+| Repository | CI | Maintainer | Commits |
+|---|---|---|---|
+| bookfinder | [![CI](https://github.com/tokimo-lab/bookfinder/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/bookfinder/actions/workflows/ci.yml) | William Chan | 5 |
+| cc | — | William Chan | 1 |
+| novel-downloader-rs | — | William Chan | 8 |
+| paperhunt | — | William Chan | 3 |
+| subtitle-aggregator | — | William Chan | 1 |
+| tokimo-server | — | William Chan | 0 |
+
+---
+
 <div align="center">
 
 Self-hosted · Privacy-first · Rust-powered
