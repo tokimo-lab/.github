@@ -13,6 +13,45 @@ where your AI assistant works, thinks, and shows you the results in real time.
 
 ---
 
+## Repositories
+
+| | Repository | CI | Maintainer | Commits |
+|---|---|---|---|---|
+| 🖥️ Core | [tokimo](https://github.com/tokimo-lab/tokimo) *(私有)* | [![CI](https://github.com/tokimo-lab/tokimo/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo/actions/workflows/ci.yml) | — | 2,420 |
+| 📦 Packages | [tokimo-package-anysql](https://github.com/tokimo-lab/tokimo-package-anysql) | [![CI](https://github.com/tokimo-lab/tokimo-package-anysql/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-package-anysql/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 5 |
+| | [tokimo-package-channel](https://github.com/tokimo-lab/tokimo-package-channel) | [![CI](https://github.com/tokimo-lab/tokimo-package-channel/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-package-channel/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 1 |
+| | [tokimo-package-ffmpeg](https://github.com/tokimo-lab/tokimo-package-ffmpeg) | [![CI](https://github.com/tokimo-lab/tokimo-package-ffmpeg/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-package-ffmpeg/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 3 |
+| | [tokimo-package-hls](https://github.com/tokimo-lab/tokimo-package-hls) | [![CI](https://github.com/tokimo-lab/tokimo-package-hls/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-package-hls/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 2 |
+| | [tokimo-package-mcp](https://github.com/tokimo-lab/tokimo-package-mcp) | [![CI](https://github.com/tokimo-lab/tokimo-package-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-package-mcp/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 2 |
+| | [tokimo-package-rootfs](https://github.com/tokimo-lab/tokimo-package-rootfs) | [![CI](https://github.com/tokimo-lab/tokimo-package-rootfs/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-package-rootfs/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 10 |
+| | [tokimo-package-sandbox](https://github.com/tokimo-lab/tokimo-package-sandbox) | [![CI](https://github.com/tokimo-lab/tokimo-package-sandbox/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-package-sandbox/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 20 |
+| | [tokimo-package-sdk](https://github.com/tokimo-lab/tokimo-package-sdk) | [![CI](https://github.com/tokimo-lab/tokimo-package-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-package-sdk/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 15 |
+| | [tokimo-package-ssh](https://github.com/tokimo-lab/tokimo-package-ssh) | [![CI](https://github.com/tokimo-lab/tokimo-package-ssh/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-package-ssh/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 2 |
+| | [tokimo-package-thumbnail](https://github.com/tokimo-lab/tokimo-package-thumbnail) | [![CI](https://github.com/tokimo-lab/tokimo-package-thumbnail/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-package-thumbnail/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 3 |
+| | [tokimo-package-universal-archiver](https://github.com/tokimo-lab/tokimo-package-universal-archiver) | [![CI](https://github.com/tokimo-lab/tokimo-package-universal-archiver/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-package-universal-archiver/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 2 |
+| | [tokimo-package-vfs](https://github.com/tokimo-lab/tokimo-package-vfs) | [![CI](https://github.com/tokimo-lab/tokimo-package-vfs/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-package-vfs/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 5 |
+| | [tokimo-package-web-fetch](https://github.com/tokimo-lab/tokimo-package-web-fetch) | [![CI](https://github.com/tokimo-lab/tokimo-package-web-fetch/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-package-web-fetch/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 4 |
+| | [tokimo-package-web-search](https://github.com/tokimo-lab/tokimo-package-web-search) | [![CI](https://github.com/tokimo-lab/tokimo-package-web-search/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-package-web-search/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 3 |
+| 📱 Apps | [tokimo-app-apple-music](https://github.com/tokimo-lab/tokimo-app-apple-music) | [![CI](https://github.com/tokimo-lab/tokimo-app-apple-music/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-app-apple-music/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 14 |
+| | [tokimo-app-helloworld](https://github.com/tokimo-lab/tokimo-app-helloworld) | [![CI](https://github.com/tokimo-lab/tokimo-app-helloworld/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-app-helloworld/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 10 |
+| | [tokimo-app-home-assistant](https://github.com/tokimo-lab/tokimo-app-home-assistant) | [![CI](https://github.com/tokimo-lab/tokimo-app-home-assistant/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-app-home-assistant/actions/workflows/ci.yml) | [<img src="https://github.com/tinymins.png" width="16" /> @tinymins](https://github.com/tinymins) | 50 |
+| 🧩 Libs & Tools | [tokimo-ui](https://github.com/tokimo-lab/tokimo-ui) | [![CI](https://github.com/tokimo-lab/tokimo-ui/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-ui/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 213 |
+| | [tokimo-perception](https://github.com/tokimo-lab/tokimo-perception) | [![CI](https://github.com/tokimo-lab/tokimo-perception/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-perception/actions/workflows/ci.yml) | [<img src="https://github.com/tinymins.png" width="16" /> @tinymins](https://github.com/tinymins) | 128 |
+| | [tokimo-bus](https://github.com/tokimo-lab/tokimo-bus) | [![CI](https://github.com/tokimo-lab/tokimo-bus/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-bus/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 4 |
+| | [tokimo-viewers](https://github.com/tokimo-lab/tokimo-viewers) | [![CI](https://github.com/tokimo-lab/tokimo-viewers/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-viewers/actions/workflows/ci.yml) | [<img src="https://github.com/tinymins.png" width="16" /> @tinymins](https://github.com/tinymins) | 2 |
+| | [tokimo-kvm](https://github.com/tokimo-lab/tokimo-kvm) | [![CI](https://github.com/tokimo-lab/tokimo-kvm/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-kvm/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 1 |
+| | [tokimo-translate](https://github.com/tokimo-lab/tokimo-translate) | [![CI](https://github.com/tokimo-lab/tokimo-translate/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-translate/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 1 |
+| | [tokimo-universal-im](https://github.com/tokimo-lab/tokimo-universal-im) | [![CI](https://github.com/tokimo-lab/tokimo-universal-im/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-universal-im/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 4 |
+| | [kvdb](https://github.com/tokimo-lab/kvdb) | [![CI](https://github.com/tokimo-lab/kvdb/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/kvdb/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 1 |
+| 🔒 Private | bookfinder | [![CI](https://github.com/tokimo-lab/bookfinder/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/bookfinder/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 5 |
+| | cc | [![CI](https://github.com/tokimo-lab/cc/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/cc/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 1 |
+| | novel-downloader-rs | [![CI](https://github.com/tokimo-lab/novel-downloader-rs/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/novel-downloader-rs/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 8 |
+| | paperhunt | [![CI](https://github.com/tokimo-lab/paperhunt/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/paperhunt/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 3 |
+| | subtitle-aggregator | [![CI](https://github.com/tokimo-lab/subtitle-aggregator/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/subtitle-aggregator/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 1 |
+| | tokimo-server | [![CI](https://github.com/tokimo-lab/tokimo-server/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-server/actions/workflows/ci.yml) | [<img src="https://github.com/luckyyyyy.png" width="16" /> @luckyyyyy](https://github.com/luckyyyyy) | 0 |
+
+---
+
 ### The Problem
 
 **CLI agents are powerful, but blind.** Claude Code, Codex, and MCP-powered tools can execute complex workflows — but the results live in a black box. You still verify everything yourself, across ten different apps.
@@ -96,67 +135,6 @@ End-to-end type safety: Rust → ts-rs → TypeScript → React Query.
 ```bash
 docker compose up -d
 ```
-
----
-
-## Repositories
-
-### Core
-
-| Repository | CI | Maintainer | Commits |
-|---|---|---|---|
-| [tokimo](https://github.com/tokimo-lab/tokimo) | — | William Chan | 2,420 |
-
-### Packages
-
-| Repository | CI | Maintainer | Commits |
-|---|---|---|---|
-| [tokimo-package-anysql](https://github.com/tokimo-lab/tokimo-package-anysql) | [![CI](https://github.com/tokimo-lab/tokimo-package-anysql/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-package-anysql/actions/workflows/ci.yml) | William Chan | 5 |
-| [tokimo-package-channel](https://github.com/tokimo-lab/tokimo-package-channel) | — | William Chan | 1 |
-| [tokimo-package-ffmpeg](https://github.com/tokimo-lab/tokimo-package-ffmpeg) | — | William Chan | 3 |
-| [tokimo-package-hls](https://github.com/tokimo-lab/tokimo-package-hls) | — | William Chan | 2 |
-| [tokimo-package-mcp](https://github.com/tokimo-lab/tokimo-package-mcp) | — | William Chan | 2 |
-| [tokimo-package-rootfs](https://github.com/tokimo-lab/tokimo-package-rootfs) | [![CI](https://github.com/tokimo-lab/tokimo-package-rootfs/actions/workflows/build.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-package-rootfs/actions/workflows/build.yml) | William Chan | 10 |
-| [tokimo-package-sandbox](https://github.com/tokimo-lab/tokimo-package-sandbox) | — | William Chan | 20 |
-| [tokimo-package-sdk](https://github.com/tokimo-lab/tokimo-package-sdk) | — | William Chan | 15 |
-| [tokimo-package-ssh](https://github.com/tokimo-lab/tokimo-package-ssh) | — | William Chan | 2 |
-| [tokimo-package-thumbnail](https://github.com/tokimo-lab/tokimo-package-thumbnail) | — | William Chan | 3 |
-| [tokimo-package-universal-archiver](https://github.com/tokimo-lab/tokimo-package-universal-archiver) | — | William Chan | 2 |
-| [tokimo-package-vfs](https://github.com/tokimo-lab/tokimo-package-vfs) | [![CI](https://github.com/tokimo-lab/tokimo-package-vfs/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-package-vfs/actions/workflows/ci.yml) | William Chan | 5 |
-| [tokimo-package-web-fetch](https://github.com/tokimo-lab/tokimo-package-web-fetch) | [![CI](https://github.com/tokimo-lab/tokimo-package-web-fetch/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-package-web-fetch/actions/workflows/ci.yml) | William Chan | 4 |
-| [tokimo-package-web-search](https://github.com/tokimo-lab/tokimo-package-web-search) | — | William Chan | 3 |
-
-### Apps
-
-| Repository | CI | Maintainer | Commits |
-|---|---|---|---|
-| [tokimo-app-apple-music](https://github.com/tokimo-lab/tokimo-app-apple-music) | — | William Chan | 14 |
-| [tokimo-app-helloworld](https://github.com/tokimo-lab/tokimo-app-helloworld) | — | William Chan | 10 |
-| [tokimo-app-home-assistant](https://github.com/tokimo-lab/tokimo-app-home-assistant) | — | Emil Zhai | 50 |
-
-### Libraries & Tools
-
-| Repository | CI | Maintainer | Commits |
-|---|---|---|---|
-| [tokimo-ui](https://github.com/tokimo-lab/tokimo-ui) | [![CI](https://github.com/tokimo-lab/tokimo-ui/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/tokimo-ui/actions/workflows/ci.yml) | William Chan | 213 |
-| [tokimo-perception](https://github.com/tokimo-lab/tokimo-perception) | — | Emil Zhai | 128 |
-| [tokimo-bus](https://github.com/tokimo-lab/tokimo-bus) | — | William Chan | 4 |
-| [tokimo-viewers](https://github.com/tokimo-lab/tokimo-viewers) | — | Emil Zhai | 2 |
-| [tokimo-kvm](https://github.com/tokimo-lab/tokimo-kvm) | — | William Chan | 1 |
-| [tokimo-translate](https://github.com/tokimo-lab/tokimo-translate) | — | William Chan | 1 |
-| [tokimo-universal-im](https://github.com/tokimo-lab/tokimo-universal-im) | — | William Chan | 4 |
-| [kvdb](https://github.com/tokimo-lab/kvdb) | — | William Chan | 1 |
-
-### Private (暂未开源)
-
-| Repository | CI | Maintainer | Commits |
-|---|---|---|---|
-| bookfinder | [![CI](https://github.com/tokimo-lab/bookfinder/actions/workflows/ci.yml/badge.svg)](https://github.com/tokimo-lab/bookfinder/actions/workflows/ci.yml) | William Chan | 5 |
-| cc | — | William Chan | 1 |
-| novel-downloader-rs | — | William Chan | 8 |
-| paperhunt | — | William Chan | 3 |
-| subtitle-aggregator | — | William Chan | 1 |
-| tokimo-server | — | William Chan | 0 |
 
 ---
 
