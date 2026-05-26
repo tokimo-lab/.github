@@ -42,15 +42,20 @@ where your AI assistant works, thinks, and shows you the results in real time.
 | | [tokimo-package-web-search](https://github.com/tokimo-lab/tokimo-package-web-search) | [![CI](https://github.com/tokimo-lab/tokimo-package-web-search/workflows/CI/badge.svg)](https://github.com/tokimo-lab/tokimo-package-web-search/actions/workflows/ci.yml) |
 | Apps | [tokimo-app-apple-music](https://github.com/tokimo-lab/tokimo-app-apple-music) | [![CI](https://github.com/tokimo-lab/tokimo-app-apple-music/workflows/CI/badge.svg)](https://github.com/tokimo-lab/tokimo-app-apple-music/actions/workflows/ci.yml) |
 | | [tokimo-app-bangumi-calendar](https://github.com/tokimo-lab/tokimo-app-bangumi-calendar) | [![CI](https://github.com/tokimo-lab/tokimo-app-bangumi-calendar/workflows/CI/badge.svg)](https://github.com/tokimo-lab/tokimo-app-bangumi-calendar/actions/workflows/ci.yml) |
+| | [tokimo-app-book](https://github.com/tokimo-lab/tokimo-app-book) | |
 | | [tokimo-app-calculator](https://github.com/tokimo-lab/tokimo-app-calculator) | [![CI](https://github.com/tokimo-lab/tokimo-app-calculator/workflows/CI/badge.svg)](https://github.com/tokimo-lab/tokimo-app-calculator/actions/workflows/ci.yml) |
 | | [tokimo-app-calendar](https://github.com/tokimo-lab/tokimo-app-calendar) | |
 | | [tokimo-app-computer-use](https://github.com/tokimo-lab/tokimo-app-computer-use) | [![CI](https://github.com/tokimo-lab/tokimo-app-computer-use/workflows/CI/badge.svg)](https://github.com/tokimo-lab/tokimo-app-computer-use/actions/workflows/ci.yml) |
 | | [tokimo-app-dashcam-archive](https://github.com/tokimo-lab/tokimo-app-dashcam-archive) | [![CI](https://github.com/tokimo-lab/tokimo-app-dashcam-archive/workflows/CI/badge.svg)](https://github.com/tokimo-lab/tokimo-app-dashcam-archive/actions/workflows/ci.yml) |
 | | [tokimo-app-database](https://github.com/tokimo-lab/tokimo-app-database) | |
+| | [tokimo-app-docs](https://github.com/tokimo-lab/tokimo-app-docs) | |
 | | [tokimo-app-helloworld](https://github.com/tokimo-lab/tokimo-app-helloworld) | [![CI](https://github.com/tokimo-lab/tokimo-app-helloworld/workflows/CI/badge.svg)](https://github.com/tokimo-lab/tokimo-app-helloworld/actions/workflows/ci.yml) |
 | | [tokimo-app-home-assistant](https://github.com/tokimo-lab/tokimo-app-home-assistant) | [![CI](https://github.com/tokimo-lab/tokimo-app-home-assistant/workflows/CI/badge.svg)](https://github.com/tokimo-lab/tokimo-app-home-assistant/actions/workflows/ci.yml) |
 | | [tokimo-app-mail](https://github.com/tokimo-lab/tokimo-app-mail) | [![CI](https://github.com/tokimo-lab/tokimo-app-mail/workflows/CI/badge.svg)](https://github.com/tokimo-lab/tokimo-app-mail/actions/workflows/ci.yml) |
 | | [tokimo-app-minesweeper](https://github.com/tokimo-lab/tokimo-app-minesweeper) | [![CI](https://github.com/tokimo-lab/tokimo-app-minesweeper/workflows/CI/badge.svg)](https://github.com/tokimo-lab/tokimo-app-minesweeper/actions/workflows/ci.yml) |
+| | [tokimo-app-music](https://github.com/tokimo-lab/tokimo-app-music) | |
+| | [tokimo-app-photo](https://github.com/tokimo-lab/tokimo-app-photo) | |
+| | [tokimo-app-terminal](https://github.com/tokimo-lab/tokimo-app-terminal) | |
 | | [tokimo-app-video](https://github.com/tokimo-lab/tokimo-app-video) | [![CI](https://github.com/tokimo-lab/tokimo-app-video/workflows/CI/badge.svg)](https://github.com/tokimo-lab/tokimo-app-video/actions/workflows/ci.yml) |
 | | [tokimo-app-weather](https://github.com/tokimo-lab/tokimo-app-weather) | |
 | Libs & Tools | [tokimo-ui](https://github.com/tokimo-lab/tokimo-ui) | [![CI](https://github.com/tokimo-lab/tokimo-ui/workflows/CI/badge.svg)](https://github.com/tokimo-lab/tokimo-ui/actions/workflows/ci.yml) |
